@@ -1,0 +1,58 @@
+git init			//将当前目录变成git可以管理的仓库
+git add filename			//把文件添加到仓库（暂存区）
+git commit -m "描述" 	//将文件提交到仓库
+git diff filename			//查看未提交的修改的具体内容
+git status			//查看仓库当前状态
+git log 			//显示提交日志
+git log --pretty=oneline	//
+git reset --hard HEAD^	//回退上一个版本
+git reset --hrad commit-id //回到指定版本
+git reflog			//查看使用过得命令
+git diff HEAD -- filename 	//查看工作区和版本库中最新版的区别
+git checkout -- filename 	//丢弃工作区修改
+git checkout name  //切换分支
+git reset HEAD filename 	//把暂存区的修改撤销
+git rm filename		//从版本库中删除文件（删完之后需要 commit）
+git remote add origin 链接 	//将本地库与远程库关联
+git branch -M name		//
+git push -u origin name	//第一次推送
+git push origin name	//
+git remote -v			//查看远程库信息
+git remote rm name		//删除远程库
+git checkout -b dev		//创建并切换分支
+	git branch dev	//创建分支
+	git checkout dev	//切换分支
+git branch			//查看分支
+git merge branch-name	//合并分支到当前分支
+git branch -d brach-name	//删除分支
+git log --graph --pretty=oneline --abbrev-commit	
+git merge --no-ff -m "merge with no-ff" dev  //强制禁用fast forward模式（保留合并历史）
+gti stash			//保存现场
+git stash list		//查看保存的现场
+git stash pop			//恢复现场同时删除
+git stash apply name	//恢复但不删除
+git cherry-pick commit-id	//复制一个特定的提交到当前分支	
+git branch -D name		//强制删除一个分支
+git remote			//
+git push origin branch-name	//推送到远程库
+git pull			//将远程的抓取下来进行本地合并
+git checkout -b branch-name origin/branch-name //创建远程分支到本地
+git branch --set-upstream-to=origin/branch-name branch-name //指定本地与远程分支的链接
+git rebase			//变基
+git tag name			//打上一个标签
+git tag name commit-id	//指定一个版本打上标签
+git tag			//查看标签
+git show tag-name		//查看标签的信息
+git tag -a name -m "说明文字" commit-id	//创建带有说明的标签
+git tag -d name		//删除标签
+git push origin tag-name	//推送一个本地标签到远程库
+git push origin --tags	//推送全部未推送过得本地标签
+git push origin :/refs/tags/tag-name	//删除一个远程标签
+
+
+
+
+
+//新版 提供切换
+git switch -c name
+git switch name
